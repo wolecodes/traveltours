@@ -57,7 +57,11 @@ body {
 a {
   text-decoration: none;
 }
-img {
+ul {
+  list-style: none;
+}
+
+img:not(.nav-logo) {
   width: 100%;
   display: block;
 }
@@ -151,7 +155,65 @@ p {
 =============== 
 Navbar
 ===============
+
 */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--clr-white);
+  box-shadow: var(--dark-shadow);
+  z-index: 2;
+}
+.nav-center {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.nav-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--clr-primary-5);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.nav-toggle:hover {
+  transform: scale(1.2);
+}
+.nav-icons {
+  display: none;
+}
+.nav-link {
+  display: block;
+  padding: 0.8rem 2rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  color: var(--clr-grey-1);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+.nav-link:hover {
+  background: var(--clr-primary-8);
+  color: var(--clr-primary-1);
+  padding-left: 2.25rem;
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-links {
+  height: 286px;
+}
 /*
 =============== 
 Hero
